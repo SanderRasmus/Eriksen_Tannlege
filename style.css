@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+/*-----------------------------*/
+/* Navbar - Toppen  */
+/*-----------------------------*/
+nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+}
+
+nav > div > p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+
+.Meny {
+    width: 100px;
+    text-align: center;
+}
+
+.Meny:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.Logo {
+    position: relative;
+    right: 7%;
+}
+
+.Logo > img {
+    width: 230px;
+}
+
+.Timebestilling {
+    position: relative;
+    left: 7%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 7px;
+    height: 30px;
+    width: 140px;
+}
+
+.Timebestilling > p {
+    position: relative;
+    bottom: 15.5px;
+}
+
+.Timebestilling > img {
+    width: 30px;
+    height: 30px;
+}
+
+.Timebestilling:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/*-----------------------------*/
+/* Hamburgermeny - Toppen  */
+/*-----------------------------*/
+
+.hamburgermenu > div > img {
+    width: 40px;
+}
+
+.hamburgermenu > div > img:hover {
+    cursor: pointer;
+}
+
+.hamburgermenu {
+    display: flex;
+    justify-content: right;
+    position: relative;
+    right: 50px;
+    top: -50px;
+    visibility: hidden;
+}
+
+.ham-meny {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+
+.hammeny-hidden {
+    visibility: hidden;
+}
+
+.hammeny-container {
+    background-color: white;
+    width: 100%;
+    margin-bottom: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hammeny-container > div > p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.hammeny-container > div:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/*-----------------------------*/
+/* Tjenester  */
+/*-----------------------------*/
+.Tjenester-Section {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.Tjenester-Header > p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.Tjenester-Row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.Tjenester-Row > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 2px 1px 3px;
+    color: grey;
+    border-radius: 10px;
+    width: 200px;
+    padding: 10px;
+}
+
+.Tjenester-Row > div > p {
+    color: black;
+}
+
+.DivEnter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 1px 2px 1px 3px;
+    color: grey;
+    width: 200px;
+    padding: 10px;
+    text-decoration: underline;
+    transform: scale(1.2);
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+
+.DivExit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 2px 1px 3px;
+    color: grey;
+    border-radius: 10px;
+    width: 200px;
+    padding: 10px;
+    text-decoration: none;
+    transform: scale(1);
+    transition-duration: 200ms;
+}
+
+.Tjenester-Row > div > p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+.Tjenester-Row > div > img {
+    width: 110px;
+}
+
+#priserBtn {
+    position: relative;
+    top: 25px;
+    width: 180px;
+    height: 55px;
+    border: 0px;
+    border-radius: 25px;
+    background-color: rgb(61, 138, 112);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+#priserBtn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/*-----------------------------*/
+/* Landing Page  */
+/*-----------------------------*/
+
+.Landing-Section {
+    margin-top: -150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 120px;
+}
+
+.Landing-Tekst {
+    position: relative;
+    top: 40px;
+}
+
+.Landing-Tekst > p:first-child {
+    font-size: 34px;
+    font-weight: 600;
+    width: 420px;
+    color: rgb(61, 138, 112);
+}
+
+.Landing-Tekst > p {
+    font-family: 'Poppins', sans-serif;
+    width: 400px;
+}
+
+.Landing-Bilde > img {
+    width: 600px;
+}
+
+#bestillBtn {
+    position: relative;
+    top: 45px;
+    background-color: rgb(61, 138, 112);
+    color: white;
+    border: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    border-radius: 20px;
+    width: 220px;
+    height: 50px;
+}
+
+#bestillBtn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(61, 138, 112);
+}
+
+.footer-container {
+    position: relative;
+    top: 10px;
+    left: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.footer-container > div > p {
+    position: relative;
+    top: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 17px;
+}
+
+.footer-image > img {
+    width: 300px;
+    filter: invert(100%);
+}
+
+
+@media screen and (max-width: 1232px) {
+    .Logo {
+        right: 4%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    .Timebestilling {
+        left: 4%;
+    }
+}
+
+@media screen and (max-width: 1154px) {
+    .Landing-Section {
+        gap: 60px;
+    }
+    
+    .Landing-Bilde > img {
+        width: 450px;
+    }
+
+    .Landing-Tekst {
+        top: 0px;
+    }
+
+    #bestillBtn {
+        top: 20px;
+    }
+}
+
+@media screen and (max-width: 1026px) {
+    .footer-container {
+        gap: 80px;
+    }
+
+    .footer-container > div:first-child {
+        position: relative;
+        left: 80px;
+    }
+}
+
+@media screen and (max-width: 984px) {
+    .footer-container > div:first-child {
+        left: 0px;
+
+    }
+
+    .footer-container > div {
+        position: relative;
+        top: 10px;
+    }
+
+    .footer-image > img {
+        position: relative;
+        left: 10px;
+        top: 7px;
+        width: 200px;
+    }
+
+    .footer-container > div > p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 936px) {
+    .Logo > img {
+        width: 180px;
+    }
+
+    .Timebestilling {
+        position: relative;
+        top: 5px;
+        left: 0px;
+        padding: 5px;
+    }
+
+    .Timebestilling > img {
+        width: 25px;
+        height: 25px;
+    }
+
+    nav > div > p {
+        font-size: 15px;
+    }
+
+    .Landing-Bilde > img {
+        width: 380px;
+    }
+
+    .Landing-Section {
+        gap: 30px;
+    }
+
+    .Landing-Tekst > p:first-child {
+        font-size: 30px;
+    }
+    
+    .Landing-Tekst > p {
+        font-size: 15px;
+    }
+
+    #bestillBtn {
+        font-size: 15px;
+        height: 45px;
+        width: 200px;
+    }
+
+    .footer-container {
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 854px) {
+    .Logo > img {
+        visibility: hidden;
+    }
+
+    nav {
+        position: relative;
+        left: -100px;
+    }
+
+    .Timebestilling {
+        padding: 4px;
+    }
+}
+
+@media screen and (max-width: 834px) {
+    .Landing-Section {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .Landing-Bilde > img {
+        visibility: hidden;
+    }
+
+    .Tjenester-Section {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 786px) {
+    .footer-image > img {
+        visibility: hidden;
+    }
+
+    .footer-container {
+        gap: 0px;
+    }
+
+    .footer-container > div > p {
+        width: 400px;
+        font-size: 14px;
+    }
+
+    .footer-container > div:first-child {
+        position: relative;
+        left: 220px;
+    }
+
+    .footer-container > div:last-child {
+        position: relative;
+        right: 120px;
+    }
+}
+
+@media screen and (max-width: 718px) {
+    .Timebestilling {
+        visibility: hidden;
+    }
+
+    .Tjenester-Section {
+        margin-top: -100px;
+    }
+    
+    .Landing-Section {
+        margin-top: -200px;
+    }
+
+    nav {
+        visibility: hidden;
+    }
+
+    .hamburgermenu {
+        visibility: visible;
+    }
+
+    .Tjenester-Row > div > img {
+        width: 100px;
+    }
+
+    .Tjenester-Row > div > p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer-container > div > p {
+        font-size: 12px;
+    }
+
+    .footer-container > div:first-child {
+        left: 250px;
+    }
+
+    .footer-container > div:last-child {
+        left: -150px;
+    }
+}

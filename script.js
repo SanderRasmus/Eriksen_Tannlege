@@ -3,6 +3,12 @@ const bestillBtn = document.querySelectorAll(".bestillBtn")
 const bestillSendBtn = document.querySelector("#Bestill-SendinnBtn")
 const bestillTilbakeBtn = document.querySelector("#Bestill-TilbakeBtn")
 
+const navnInp = document.querySelector("#NavnInp")
+const tlfInp = document.querySelector("#TlfInp")
+const epostInp = document.querySelector("#EpostInp")
+const selectInp = document.querySelector("#valgt-behandling")
+const datoInp = document.querySelector("#DatoInp")
+
 const tjenesterEl = document.querySelectorAll(".Tjenester-Item");
 const hamburgermenuEl = document.querySelector(".hammeny-hidden");
 const behandlingEl = document.querySelector("#BehandlingEl");
@@ -12,6 +18,7 @@ const bodyEl = document.querySelector("body");
 
 behandlingEl.addEventListener("click", behandlingscroll);
 bestillTilbakeBtn.addEventListener("click", LukkPopup);
+bestillSendBtn.addEventListener("click", LukkPopup);
 
 
 for(let i = 0; i < tjenesterEl.length; i++) {
@@ -62,14 +69,21 @@ function AnimasjonExit() {
 }
 
 function BestillPopup() {
+    Lukkmeny()
     bodyEl.style.backgroundColor = "lightgrey";
     bestillingPopup.style.visibility = "visible";
     bestillingPopup.style.zIndex = 3;
-    Lukkmeny()
 }
 
 function LukkPopup() {
+    navnInp.value = "";
+    tlfInp.value = "";
+    epostInp.value = "";
+    selectInp.value = "Undersøkelse";
+    datoInp.value = "";
     bodyEl.style.backgroundColor = "white";
     bestillingPopup.style.visibility = "hidden";
     bestillingPopup.style.zIndex = 0;
+    bestillingPopup.style.zIndex = 0;
+
 }

@@ -16,7 +16,6 @@ nav {
     flex-direction: row;
     gap: 50px;
     padding-bottom: 10px;
-    border-bottom: 1px solid black;
 }
 
 nav > div > p {
@@ -103,6 +102,7 @@ nav > div > p {
 
 .hammeny-hidden {
     visibility: hidden;
+    z-index: -1;
 }
 
 .hammeny-container {
@@ -129,7 +129,7 @@ nav > div > p {
 /*-----------------------------*/
 .Tjenester-Section {
     margin-top: 200px;
-    margin-bottom: 200px;
+    margin-bottom: -300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -266,6 +266,7 @@ nav > div > p {
     border-radius: 20px;
     width: 220px;
     height: 50px;
+    z-index: 1;
 }
 
 #bestillBtn:hover {
@@ -273,6 +274,121 @@ nav > div > p {
     text-decoration: underline;
     font-weight: 600;
 }
+
+
+/*-----------------------------*/
+/* Bestill Popup  */
+/*-----------------------------*/
+
+.Bestill-Section {
+    position: relative;
+    top: -800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Bestill-Popup {
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 20px;
+    width: 500px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    visibility: hidden;
+}
+
+.Bestill-Popup > button {
+    width: 150px;
+    height: 40px;
+    border-radius: 15px;
+    border: 0px;
+    background-color: rgb(61, 138, 112);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+#Bestill-SendinnBtn {
+    position: relative;
+    top: 50px;
+    left: -100px;
+}
+
+#Bestill-TilbakeBtn {
+    position: relative;
+    top: 10px;
+    right: -100px;
+}
+
+#Bestill-SendinnBtn:hover, #Bestill-TilbakeBtn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.Bestill-Popup > div:first-child > p {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: rgb(61, 138, 112);
+}
+
+.Bestill-Form {
+    position: relative;
+    top: -30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Bestill-Form > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 25px;
+}
+
+#Dato {
+    position: relative;
+    left: -80px;
+}
+
+#Navn, #TLF, #E-post, #Dato {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#Navn > input, #TLF > input, #E-post > input, #Dato > input, #valgt-behandling {
+    height: 30px;
+    border-radius: 7px;
+    border: 1px solid rgb(61, 138, 112);
+}
+
+#valgt-behandling, label {
+    font-family: 'Poppins', sans-serif;
+}
+
+#valgt-behandling {
+    height: 35px;
+    width: 160px;
+}
+
+#behandling {
+    position: relative;
+    top: 15px;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 
 /* Footer */
 
@@ -516,5 +632,16 @@ footer {
 
     .footer-container > div:last-child {
         left: -150px;
+    }
+}
+
+@media screen and (max-width: 489px) {
+    .Bestill-Section {
+        position: relative;
+        top: -1250px;
+    }
+
+    .Bestill-Popup {
+        width: 400px;
     }
 }

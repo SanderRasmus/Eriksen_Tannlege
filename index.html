@@ -25,7 +25,7 @@
         <div class="Meny">
             <p>Om Oss</p>
         </div>
-        <div class="Timebestilling">
+        <div class="Timebestilling bestillBtn">
             <img src="/bilder/Kalender.jpg" alt="">
             <p>Bestill time</p>
         </div>
@@ -51,7 +51,7 @@
             <div>
                 <p>Om Oss</p>
             </div>
-            <div>
+            <div class="bestillBtn">
                 <p>Bestill time</p>
             </div>
         </div>
@@ -65,7 +65,7 @@
             <p>
                 Hos oss på Eriksen Tannlegekontor blir du alltid tatt godt imot, ivaretatt og trygg på at du mottar den beste behandlingen for deg.
             </p>
-            <button id="bestillBtn">Bestill time</button>
+            <button id="bestillBtn" class="bestillBtn">Bestill time</button>
         </div>
         <div class="Landing-Bilde">
             <img src="/bilder/Tannlege.jpg" alt="">
@@ -96,6 +96,56 @@
         </div>
         <div>
             <button id="priserBtn">Våre priser</button>
+        </div>
+    </section>
+
+    <section class="Bestill-Section">
+        <div class="Bestill-Popup">
+            <div>
+                <p>
+                    Timebestilling
+                </p>
+            </div>
+            <div class="Bestill-Form">
+                <div>
+                    <div id="Navn">
+                        <p>Fullt Navn:</p>
+                        <input id="NavnInp" type="text" placeholder="Fullt Navn">
+                    </div>
+                    <div id="TLF">
+                        <p>Telefon nr:</p>
+                        <input id="TlfInp" type="text" placeholder="Telefon nr.">
+                    </div>
+                </div>
+
+
+                <div>
+                    <div id="E-post">
+                        <p>Epost: </p>
+                        <input id="EpostInp" type="text" placeholder="E-post">
+                    </div>
+                    <div id="behandling">
+                        <label for="valgt-behandling">Behandling:</label>
+                        <select name="valgt-behandling" id="valgt-behandling">
+                            <option value="Akutt">Akutt</option>
+                            <option value="Rotfylling">Rotfylling</option>
+                            <option value="Undersøkelse">Undersøkelse</option>
+                            <option value="Tanntrekking">Tanntrekking</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div id="Dato">
+                        <p>Dato:</p>
+                        <input id="DatoInp" type="date" placeholder="Dato">
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+            <button id="Bestill-SendinnBtn">Send inn</button>
+            <button id="Bestill-TilbakeBtn">Tilbake</button>
         </div>
     </section>
 

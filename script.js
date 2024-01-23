@@ -1,27 +1,36 @@
-const tjenesterEl = document.querySelectorAll(".Tjenester-Item");
 const hamburgerBtn = document.querySelector("#HamBtn");
+const bestillBtn = document.querySelectorAll(".bestillBtn")
+const bestillSendBtn = document.querySelector("#Bestill-SendinnBtn")
+const bestillTilbakeBtn = document.querySelector("#Bestill-TilbakeBtn")
+
+const tjenesterEl = document.querySelectorAll(".Tjenester-Item");
 const hamburgermenuEl = document.querySelector(".hammeny-hidden");
 const behandlingEl = document.querySelector("#BehandlingEl");
+const bestillingPopup = document.querySelector(".Bestill-Popup")
 
 const bodyEl = document.querySelector("body");
 
 behandlingEl.addEventListener("click", behandlingscroll);
+bestillTilbakeBtn.addEventListener("click", LukkPopup);
+
 
 for(let i = 0; i < tjenesterEl.length; i++) {
     tjenesterEl[i].addEventListener("mouseover", AnimasjonEnter);
     tjenesterEl[i].addEventListener("mouseout", AnimasjonExit);
 }
 
-function AnimasjonEnter() {
-    this.className = "DivEnter"
-};
-
-function AnimasjonExit() {
-    this.className = "DivExit";
+for(let i = 0; i < bestillBtn.length; i++) {
+    bestillBtn[i].addEventListener("click", BestillPopup);
 }
 
 if(window.innerWidth <= 718) {
     hamburgerBtn.addEventListener("click", Hamburgermeny)
+    hamburgerBtn.style.zIndex = 2;
+    hamburgermenuEl.style.zIndex = 2;
+}
+else {
+    hamburgerBtn.style.zIndex = -1;
+    hamburgermenuEl.style.zIndex = -1;
 }
 
 function behandlingscroll() {
@@ -42,4 +51,25 @@ function Lukkmeny() {
     bodyEl.style.backgroundColor = "";
     hamburgermenuEl.classList = "hammeny-hidden";
     hamburgerBtn.addEventListener("click", Hamburgermeny);
+}
+
+function AnimasjonEnter() {
+    this.className = "DivEnter"
+}
+
+function AnimasjonExit() {
+    this.className = "DivExit";
+}
+
+function BestillPopup() {
+    bodyEl.style.backgroundColor = "lightgrey";
+    bestillingPopup.style.visibility = "visible";
+    bestillingPopup.style.zIndex = 3;
+    Lukkmeny()
+}
+
+function LukkPopup() {
+    bodyEl.style.backgroundColor = "white";
+    bestillingPopup.style.visibility = "hidden";
+    bestillingPopup.style.zIndex = 0;
 }

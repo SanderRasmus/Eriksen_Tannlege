@@ -1,7 +1,10 @@
 const hamburgerBtn = document.querySelector("#HamBtn");
+const hamburgermenuEl = document.querySelector(".hammeny-hidden");
+
 const bestillBtn = document.querySelectorAll(".bestillBtn")
 const bestillSendBtn = document.querySelector("#Bestill-SendinnBtn")
 const bestillTilbakeBtn = document.querySelector("#Bestill-TilbakeBtn")
+const bestillingPopup = document.querySelector(".Bestill-Popup")
 
 const navnInp = document.querySelector("#NavnInp")
 const tlfInp = document.querySelector("#TlfInp")
@@ -10,16 +13,17 @@ const selectInp = document.querySelector("#valgt-behandling")
 const datoInp = document.querySelector("#DatoInp")
 
 const tjenesterEl = document.querySelectorAll(".Tjenester-Item");
-const hamburgermenuEl = document.querySelector(".hammeny-hidden");
+const menyitemEl = document.querySelectorAll(".Meny-Item")
 const behandlingEl = document.querySelector("#BehandlingEl");
-const bestillingPopup = document.querySelector(".Bestill-Popup")
 
 const bodyEl = document.querySelector("body");
 
-behandlingEl.addEventListener("click", behandlingscroll);
 bestillTilbakeBtn.addEventListener("click", LukkPopup);
 bestillSendBtn.addEventListener("click", LukkPopup);
 
+for(let i = 0; i < menyitemEl.length; i++) {
+    menyitemEl[i].addEventListener("click", NavScroll)
+}
 
 for(let i = 0; i < tjenesterEl.length; i++) {
     tjenesterEl[i].addEventListener("mouseover", AnimasjonEnter);
@@ -40,12 +44,24 @@ else {
     hamburgermenuEl.style.zIndex = -1;
 }
 
-function behandlingscroll() {
-    window.scrollTo({
-        top: 520,
-        behavior: "smooth",
-    });
+function NavScroll(e) {
+    let valgtHeader = e.target;
+
+    if(valgtHeader.id === "BehandlingEl") {
+        window.scrollTo({
+            top: 1280,
+            behavior: "smooth",
+        });
+    }
+    
+    if(valgtHeader.id === "OmOssEl") {
+        window.scrollTo({
+            top: 600,
+            behavior: "smooth",
+        });
+    }
 }
+
 
 function Hamburgermeny() {
     bodyEl.style.backgroundColor = "#e6e3e3";

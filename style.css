@@ -136,21 +136,22 @@ nav > div > p {
     flex-direction: column;
 }
 
-.OmOss-Header > p {
+.OmOss-Header {
     font-family: 'Poppins', sans-serif;
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 600;
+    text-align: center;
 }
 
-.OmOss-Tekst > p {
+.OmOss-Tekst {
     width: 700px;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
 }
 
-.OmOss-Tekst > p:last-child {
+.OmOss-Section > div:last-child {
     position: relative;
-    top: 70px;
+    top: 100px;
 }
 
 
@@ -312,7 +313,7 @@ nav > div > p {
 
 .Bestill-Section {
     position: relative;
-    top: -1200px;
+    top: -1300px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -467,6 +468,10 @@ footer {
 }
 
 @media screen and (max-width: 1154px) {
+    .Bestill-Section {
+        top: -1200px;
+    }
+
     .Landing-Section {
         gap: 60px;
     }
@@ -487,7 +492,7 @@ footer {
 @media screen and (max-width: 1028px) {
     .Bestill-Section {
         position: relative;
-        top: -1390px;
+        top: -1450px;
     }
 }
 
@@ -589,6 +594,10 @@ footer {
 }
 
 @media screen and (max-width: 834px) {
+    .Bestill-Section {
+        top: -1250px;
+    }
+
     .Landing-Section {
         flex-wrap: wrap;
         text-align: center;
@@ -598,8 +607,14 @@ footer {
         visibility: hidden;
     }
 
-    .Tjenester-Section {
+    .OmOss-Section {
         margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 829px) {
+    .Bestill-Section {
+        top: -1550px;
     }
 }
 
@@ -630,15 +645,20 @@ footer {
 
 @media screen and (max-width: 718px) {
     .Bestill-Section {
-        top: -1200px;
+        top: -1300px;
+    }
+
+    .OmOss-Tekst {
+        font-size: 14px;
+        width: 600px;
     }
 
     .Timebestilling {
         visibility: hidden;
     }
 
-    .Tjenester-Section {
-        margin-top: -100px;
+    .OmOss-Section {
+        margin-top: -60px;
     }
     
     .Landing-Section {
@@ -662,6 +682,16 @@ footer {
     }
 }
 
+@media screen and (max-width: 605px) {
+    .OmOss-Tekst {
+        width: 400px;
+    }
+
+    .Bestill-Section {
+        top: -1400px;
+    }
+}
+
 @media screen and (max-width: 576px) {
     .footer-container > div > p {
         font-size: 12px;
@@ -679,7 +709,7 @@ footer {
 @media screen and (max-width: 489px) {
     .Bestill-Section {
         position: relative;
-        top: -1650px;
+        top: -1850px;
     }
 
     .Bestill-Popup {

@@ -37,7 +37,7 @@ for(let i = 0; i < bestillBtn.length; i++) {
 
 if(window.innerWidth <= 718) {
     hamburgerBtn.addEventListener("click", Hamburgermeny)
-    hamburgerBtn.style.zIndex = 2;
+    hamburgerBtn.style.zIndex = 3;
     hamburgermenuEl.style.zIndex = 2;
 }
 else {
@@ -140,6 +140,4 @@ function LukkPopup() {
     bodyEl.style.backgroundColor = "white";
     bestillingPopup.style.visibility = "hidden";
     bestillingPopup.style.zIndex = 0;
-    bestillingPopup.style.zIndex = 0;
-
 }

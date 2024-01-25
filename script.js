@@ -28,7 +28,7 @@ for(let i = 0; i < menyitemEl.length; i++) {
 for(let i = 0; i < tjenesterEl.length; i++) {
     tjenesterEl[i].addEventListener("mouseover", AnimasjonEnter);
     tjenesterEl[i].addEventListener("mouseout", AnimasjonExit);
-    tjenesterEl[i].addEventListener("click", ValgtBehandling)
+    tjenesterEl[i].addEventListener("click", ValgtBehandling);
 }
 
 for(let i = 0; i < bestillBtn.length; i++) {

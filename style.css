@@ -157,6 +157,67 @@ nav > div > p {
     font-size: 16px;
 }
 
+.OmOss-Ansatte-Container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.OmOss-Ansatte-Container > div {
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 280px;
+    height: 300px;
+    border-radius: 20px;
+    padding-top: 20px;
+}
+
+.OmOss-Ansatte-Container > div > p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+#Ansatt-Fredrik, #Ansatt-James, #Ansatt-Samuel, #Ansatt-Tim {
+    width: 300px;
+    height: 200px;
+    background-size: 200px;
+    background-position: 50px 00px;
+    background-repeat: no-repeat;
+}
+
+#Ansatt-Fredrik {
+    background-image: url("/bilder/Tannlege/Fredrik.png");
+    background-position: 35px 00px;
+}
+
+#Ansatt-James {
+    background-image: url("/bilder/Tannlege/James.png");
+}
+
+#Ansatt-Samuel {
+    background-image: url("/bilder/Tannlege/Samuel.png");
+}
+
+#Ansatt-Tim {
+    background-image: url("/bilder/Tannlege/Tim.png");
+    background-position: 45px 00px;
+}
+
+.Ansatt-Item {
+    transform: scale(1);
+    transition-duration: 200ms;
+}
+
+.Ansatt-Item:hover {
+    transform: scale(1.1);
+    transition-duration: 150ms;
+}
 
 
 /*-----------------------------*/
@@ -164,7 +225,7 @@ nav > div > p {
 /*-----------------------------*/
 .Tjenester-Section {
     margin-top: 200px;
-    margin-bottom: -300px;
+    margin-bottom: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -316,8 +377,9 @@ nav > div > p {
 /*-----------------------------*/
 
 .Bestill-Section {
-    position: relative;
-    top: -1100px;
+    position: absolute;
+    left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -477,10 +539,6 @@ footer {
 }
 
 @media screen and (max-width: 1154px) {
-    .Bestill-Section {
-        top: -1000px;
-    }
-
     .Landing-Section {
         gap: 60px;
     }
@@ -506,10 +564,6 @@ footer {
 }
 
 @media screen and (max-width: 1029px) {
-    .Bestill-Section {
-        top: -1200px;
-    }
-
     .footer-container {
         gap: 80px;
     }
@@ -611,10 +665,6 @@ footer {
 }
 
 @media screen and (max-width: 834px) {
-    .Bestill-Section {
-        top: -1450px;
-    }
-
     .OmOss-Tekst {
         width: 300px;
     }
@@ -633,12 +683,6 @@ footer {
     .OmOss-Section {
         position: relative;
         top: -150px;
-    }
-}
-
-@media screen and (max-width: 829px) {
-    .Bestill-Section {
-        top: -1350px;
     }
 }
 
@@ -668,10 +712,6 @@ footer {
 }
 
 @media screen and (max-width: 718px) {
-    .Bestill-Section {
-        top: -1400px;
-    }
-
     .OmOss-Tekst {
         font-size: 14px;
         width: 600px;
@@ -710,10 +750,6 @@ footer {
     .OmOss-Tekst {
         width: 400px;
     }
-
-    .Bestill-Section {
-        top: -1440px;
-    }
 }
 
 @media screen and (max-width: 576px) {
@@ -731,11 +767,6 @@ footer {
 }
 
 @media screen and (max-width: 489px) {
-    .Bestill-Section {
-        position: relative;
-        top: -1850px;
-    }
-
     .Bestill-Popup {
         width: 400px;
     }

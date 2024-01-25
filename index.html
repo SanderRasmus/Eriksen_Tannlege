@@ -31,6 +31,57 @@
         </div>
     </nav>
 
+    
+    <section class="Bestill-Section">
+        <div class="Bestill-Popup">
+            <div>
+                <p>
+                    Timebestilling
+                </p>
+            </div>
+            <div class="Bestill-Form">
+                <div>
+                    <div id="Navn">
+                        <p>Fullt Navn:</p>
+                        <input id="NavnInp" type="text" placeholder="Fullt Navn">
+                    </div>
+                    <div id="TLF">
+                        <p>Telefon nr:</p>
+                        <input id="TlfInp" type="text" placeholder="Telefon nr.">
+                    </div>
+                </div>
+
+
+                <div>
+                    <div id="E-post">
+                        <p>Epost: </p>
+                        <input id="EpostInp" type="text" placeholder="E-post">
+                    </div>
+                    <div id="behandling">
+                        <label for="valgt-behandling">Behandling:</label>
+                        <select name="valgt-behandling" id="valgt-behandling">
+                            <option value="Akutt">Akutt</option>
+                            <option value="Rotfylling">Rotfylling</option>
+                            <option value="Undersøkelse">Undersøkelse</option>
+                            <option value="Tanntrekking">Tanntrekking</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div id="Dato">
+                        <p>Dato:</p>
+                        <input id="DatoInp" type="date" placeholder="Dato">
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+            <button id="Bestill-SendinnBtn">Send inn</button>
+            <button id="Bestill-TilbakeBtn">Tilbake</button>
+        </div>
+    </section>
+
     <article class="hamburgermenu">
         <div id="HamBtn">
             <img src="/bilder/hamburger.png" alt="">
@@ -91,21 +142,21 @@
             </div>
         </div>
         <div class="OmOss-Ansatte-Container">
-            <div>
-                <img src="" alt="">
-                <p></p>
+            <div class="Ansatt-Item">
+                <div id="Ansatt-Fredrik"></div>
+                <p>Fredrik<br>Tannlege</p>
             </div>
-            <div>
-                <img src="" alt="">
-                <p></p>
+            <div class="Ansatt-Item">
+                <div id="Ansatt-James"></div>
+                <p>James<br>Tannlegeassistent</p>
             </div>
-            <div>
-                <img src="" alt="">
-                <p></p>
+            <div class="Ansatt-Item">
+                <div id="Ansatt-Samuel"></div>
+                <p>Samuel<br>Resepsjonist</p>
             </div>
-            <div>
-                <img src="" alt="">
-                <p></p>
+            <div class="Ansatt-Item">
+                <div id="Ansatt-Tim"></div>
+                <p>Tim<br>Tannlege</p>
             </div>
         </div>
     </section>
@@ -137,55 +188,6 @@
         </div>
     </section>
 
-    <section class="Bestill-Section">
-        <div class="Bestill-Popup">
-            <div>
-                <p>
-                    Timebestilling
-                </p>
-            </div>
-            <div class="Bestill-Form">
-                <div>
-                    <div id="Navn">
-                        <p>Fullt Navn:</p>
-                        <input id="NavnInp" type="text" placeholder="Fullt Navn">
-                    </div>
-                    <div id="TLF">
-                        <p>Telefon nr:</p>
-                        <input id="TlfInp" type="text" placeholder="Telefon nr.">
-                    </div>
-                </div>
-
-
-                <div>
-                    <div id="E-post">
-                        <p>Epost: </p>
-                        <input id="EpostInp" type="text" placeholder="E-post">
-                    </div>
-                    <div id="behandling">
-                        <label for="valgt-behandling">Behandling:</label>
-                        <select name="valgt-behandling" id="valgt-behandling">
-                            <option value="Akutt">Akutt</option>
-                            <option value="Rotfylling">Rotfylling</option>
-                            <option value="Undersøkelse">Undersøkelse</option>
-                            <option value="Tanntrekking">Tanntrekking</option>
-                        </select>
-                    </div>
-                </div>
-
-
-                <div>
-                    <div id="Dato">
-                        <p>Dato:</p>
-                        <input id="DatoInp" type="date" placeholder="Dato">
-                    </div>
-                    <div></div>
-                </div>
-            </div>
-            <button id="Bestill-SendinnBtn">Send inn</button>
-            <button id="Bestill-TilbakeBtn">Tilbake</button>
-        </div>
-    </section>
 
     <footer>
         <div class="footer-container">

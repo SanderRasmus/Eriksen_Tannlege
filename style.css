@@ -486,6 +486,70 @@ nav > div > p {
     flex-direction: column;
 }
 
+/*-----------------------------*/
+/* Pris Liste */
+/*-----------------------------*/
+
+.Priser-Section {
+    width: 100%;
+    visibility: hidden;
+}
+
+.Priser-Container > div > div:first-child > p {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.Priser-Container > div:first-child {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+}
+
+#Prisliste-Lukk {
+    position: relative;
+    top: 20px;
+    width: 20px;
+}
+
+.Priser-Container {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    width: 500px;
+    height: 400px;
+    transform: translateX(-50%);
+    border: 2px solid black;
+    border-radius: 17px;
+    background-color: white;
+}
+
+.Priser-Tabell {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.Priser-Tabell thead {
+    background-color: #63a91f;
+    background-image: linear-gradient(314deg, #63a91f 0%, #1a512e 74%);    
+    color: white;
+}
+
+.Priser-Tabell th, 
+.Priser-Tabell td {
+    font-family: 'Poppins', sans-serif;
+    padding: 15px;
+}
+
+.Tabell-Farge {
+    background-color: lightgrey;
+}
+
 
 /* Footer */
 
@@ -735,6 +799,11 @@ footer {
 
     .hamburgermenu {
         visibility: visible;
+        z-index: 3;
+    }
+
+    .hammeny-container {
+        z-index: 2;
     }
 
     .Tjenester-Row > div > img {

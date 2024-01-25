@@ -16,33 +16,19 @@ const tjenesterEl = document.querySelectorAll(".Tjenester-Item");
 const menyitemEl = document.querySelectorAll(".Meny-Item")
 const behandlingEl = document.querySelector("#BehandlingEl");
 
+const priserEl = document.querySelector(".Priser-Section")
+const priserContainer = document.querySelector(".Priser-Container")
+const priserBtn = document.querySelector("#priserBtn");
+const priserLukkBtn = document.querySelectorAll(".PriserLukkBtn")
+
 const bodyEl = document.querySelector("body");
 
-bestillTilbakeBtn.addEventListener("click", LukkPopup);
-bestillSendBtn.addEventListener("click", LukkPopup);
+/* 
+NavBar scrollTo funksjoner
+*/
 
 for(let i = 0; i < menyitemEl.length; i++) {
     menyitemEl[i].addEventListener("click", NavScroll)
-}
-
-for(let i = 0; i < tjenesterEl.length; i++) {
-    tjenesterEl[i].addEventListener("mouseover", AnimasjonEnter);
-    tjenesterEl[i].addEventListener("mouseout", AnimasjonExit);
-    tjenesterEl[i].addEventListener("click", ValgtBehandling);
-}
-
-for(let i = 0; i < bestillBtn.length; i++) {
-    bestillBtn[i].addEventListener("click", BestillPopup);
-}
-
-if(window.innerWidth <= 718) {
-    hamburgerBtn.addEventListener("click", Hamburgermeny)
-    hamburgerBtn.style.zIndex = 3;
-    hamburgermenuEl.style.zIndex = 2;
-}
-else {
-    hamburgerBtn.style.zIndex = -1;
-    hamburgermenuEl.style.zIndex = -1;
 }
 
 function NavScroll(e) {
@@ -61,6 +47,54 @@ function NavScroll(e) {
             behavior: "smooth",
         });
     }
+
+    if(valgtHeader.id === "PriserEl") {
+        window.scrollTo({
+            top: 1320,
+            behavior: "smooth",
+        })
+    }
+}
+
+/* 
+Prisliste funksjoner
+*/
+priserBtn.addEventListener("click", PriserÅpne);
+
+for(let i = 0; i < priserLukkBtn.length; i++) {
+    priserLukkBtn[i].addEventListener("click", PriserLukk);
+}
+
+function PriserÅpne() {
+    bodyEl.style.backgroundColor = "lightgrey";
+    priserEl.style.visibility = "visible";
+    priserEl.style.zIndex = 5;
+    priserContainer.style.zIndex = 2;
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+}
+
+function PriserLukk() {
+    bodyEl.style.backgroundColor = "";
+    priserEl.style.visibility = "hidden";
+    priserEl.style.zIndex= -1;
+    priserContainer.style.zIndex = -1;
+}
+
+/* 
+Hamburgermeny funksjoner
+*/
+
+if(window.innerWidth <= 718) {
+    hamburgerBtn.addEventListener("click", Hamburgermeny)
+    hamburgerBtn.style.zIndex = 3;
+    hamburgermenuEl.style.zIndex = 2;
+}
+else {
+    hamburgerBtn.style.zIndex = -1;
+    hamburgermenuEl.style.zIndex = -1;
 }
 
 function Hamburgermeny() {
@@ -76,6 +110,17 @@ function Lukkmeny() {
     hamburgerBtn.addEventListener("click", Hamburgermeny);
 }
 
+/* 
+Tjeneste Hover funksjoner
+*/
+
+
+for(let i = 0; i < tjenesterEl.length; i++) {
+    tjenesterEl[i].addEventListener("mouseover", AnimasjonEnter);
+    tjenesterEl[i].addEventListener("mouseout", AnimasjonExit);
+    tjenesterEl[i].addEventListener("click", ValgtBehandling);
+}
+
 function AnimasjonEnter() {
     this.className = "DivEnter";
 }
@@ -83,6 +128,11 @@ function AnimasjonEnter() {
 function AnimasjonExit() {
     this.className = "DivExit";
 }
+
+
+/* 
+Click Tjeneste funksjoner
+*/
 
 function ValgtBehandling(e) {
     let valgtbehandlingEl = e.target;
@@ -123,6 +173,16 @@ function ValgtBehandling(e) {
         });
     }
 }
+
+/* 
+Popup / Timebestilling funksjoner
+*/
+for(let i = 0; i < bestillBtn.length; i++) {
+    bestillBtn[i].addEventListener("click", BestillPopup);
+}
+
+bestillTilbakeBtn.addEventListener("click", LukkPopup);
+bestillSendBtn.addEventListener("click", LukkPopup);
 
 function BestillPopup() {
     Lukkmeny()

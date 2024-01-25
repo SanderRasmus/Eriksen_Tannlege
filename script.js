@@ -28,6 +28,7 @@ for(let i = 0; i < menyitemEl.length; i++) {
 for(let i = 0; i < tjenesterEl.length; i++) {
     tjenesterEl[i].addEventListener("mouseover", AnimasjonEnter);
     tjenesterEl[i].addEventListener("mouseout", AnimasjonExit);
+    tjenesterEl[i].addEventListener("click", ValgtBehandling)
 }
 
 for(let i = 0; i < bestillBtn.length; i++) {
@@ -62,7 +63,6 @@ function NavScroll(e) {
     }
 }
 
-
 function Hamburgermeny() {
     bodyEl.style.backgroundColor = "#e6e3e3";
     hamburgermenuEl.className = "hammeny-container";
@@ -77,11 +77,51 @@ function Lukkmeny() {
 }
 
 function AnimasjonEnter() {
-    this.className = "DivEnter"
+    this.className = "DivEnter";
 }
 
 function AnimasjonExit() {
     this.className = "DivExit";
+}
+
+function ValgtBehandling(e) {
+    let valgtbehandlingEl = e.target;
+
+    if(valgtbehandlingEl.id === "Tjeneste-Akutt") {
+        selectInp.value = "Akutt";
+        BestillPopup()
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    }
+
+    if(valgtbehandlingEl.id === "Tjeneste-Rotfyll") {
+        selectInp.value = "Rotfylling";
+        BestillPopup()
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    }
+
+    if(valgtbehandlingEl.id === "Tjeneste-Undersøkelse") {
+        selectInp.value = "Undersøkelse";
+        BestillPopup()
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    }
+
+    if(valgtbehandlingEl.id === "Tjeneste-Tanntrekk") {
+        selectInp.value = "Tanntrekking";
+        BestillPopup()
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    }
 }
 
 function BestillPopup() {

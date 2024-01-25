@@ -143,16 +143,20 @@ nav > div > p {
     text-align: center;
 }
 
-.OmOss-Tekst {
-    width: 700px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+.OmOss-Tekst-Container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 70px;
 }
 
-.OmOss-Section > div:last-child {
-    position: relative;
-    top: 100px;
+.OmOss-Tekst {
+    width: 600px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
 }
+
 
 
 /*-----------------------------*/
@@ -313,7 +317,7 @@ nav > div > p {
 
 .Bestill-Section {
     position: relative;
-    top: -1300px;
+    top: -1100px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -453,23 +457,28 @@ footer {
 }
 
 
-@media screen and (max-width: 1232px) {
+@media screen and (max-width: 1349px) {
     .Logo {
         right: 4%;
     }
 
     nav {
-        gap: 12px;
+        gap: 14px;
     }
 
     .Timebestilling {
         left: 4%;
     }
+
+    .OmOss-Tekst {
+        font-size: 14px;
+        width: 500px;
+    }
 }
 
 @media screen and (max-width: 1154px) {
     .Bestill-Section {
-        top: -1200px;
+        top: -1000px;
     }
 
     .Landing-Section {
@@ -489,14 +498,18 @@ footer {
     }
 }
 
-@media screen and (max-width: 1028px) {
-    .Bestill-Section {
-        position: relative;
-        top: -1450px;
+@media screen and (max-width: 1071px) {
+    .OmOss-Tekst {
+        font-size: 13px;
+        width: 430px;
     }
 }
 
-@media screen and (max-width: 1026px) {
+@media screen and (max-width: 1029px) {
+    .Bestill-Section {
+        top: -1200px;
+    }
+
     .footer-container {
         gap: 80px;
     }
@@ -531,6 +544,10 @@ footer {
 }
 
 @media screen and (max-width: 936px) {
+    .OmOss-Tekst {
+        width: 380px;
+    }
+
     .Logo > img {
         width: 180px;
     }
@@ -595,10 +612,16 @@ footer {
 
 @media screen and (max-width: 834px) {
     .Bestill-Section {
-        top: -1250px;
+        top: -1450px;
+    }
+
+    .OmOss-Tekst {
+        width: 300px;
     }
 
     .Landing-Section {
+        align-items: center;
+        flex-direction: column;
         flex-wrap: wrap;
         text-align: center;
     }
@@ -608,13 +631,14 @@ footer {
     }
 
     .OmOss-Section {
-        margin-top: 0px;
+        position: relative;
+        top: -150px;
     }
 }
 
 @media screen and (max-width: 829px) {
     .Bestill-Section {
-        top: -1550px;
+        top: -1350px;
     }
 }
 
@@ -645,7 +669,7 @@ footer {
 
 @media screen and (max-width: 718px) {
     .Bestill-Section {
-        top: -1300px;
+        top: -1400px;
     }
 
     .OmOss-Tekst {
@@ -688,7 +712,7 @@ footer {
     }
 
     .Bestill-Section {
-        top: -1400px;
+        top: -1440px;
     }
 }
 

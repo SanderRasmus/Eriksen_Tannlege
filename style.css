@@ -514,6 +514,10 @@ nav > div > p {
     width: 20px;
 }
 
+#Prisliste-Lukk:hover {
+    cursor: pointer;
+}
+
 .Priser-Container {
     z-index: 1;
     display: flex;
